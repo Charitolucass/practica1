@@ -33,7 +33,7 @@ public class Notas {
     }
 
     /**
-     * Método para comprobar si las notas ingresadas están dentro del rango válido (0-10). aaa
+     * Método para comprobar si las notas ingresadas están dentro del rango válido (0-10). evaluacioncreada
      */
     public void comprobarNotas() {
         if (notaUnidad1 > 10) {
