@@ -9,7 +9,7 @@ import java.util.Scanner;
  */
 public class Notas {
     // Declaración de variables para almacenar las notas y sus respectivos acumulados.
-    private double unidadFormativa1, unidadFormativa2, unidadFormativa3;
+    private double notaUnidad1, unidadFormativa2, unidadFormativa3;//cambie unidadFormativa1 por notaUnidad1
 
     private double acumuladoUF1, acumuladoUF2, acumuladoUF3, notaFinal;
     
@@ -23,7 +23,7 @@ public class Notas {
         System.out.println("Ingrese las notas del estudiante");
         
         System.out.print("Ingrese la nota de la primera unidad formativa: ");
-        unidadFormativa1 = entradaDatos.nextDouble();
+        notaUnidad1= entradaDatos.nextDouble();//cambie unidadFormativa1 por notaUnidad1
         
         System.out.print("Ingrese la nota de la segunda unidad formativa: ");
         unidadFormativa2 = entradaDatos.nextDouble();
@@ -36,7 +36,7 @@ public class Notas {
      * Método para comprobar si las notas ingresadas están dentro del rango válido (0-10).
      */
     public void comprobarNotas() {
-        if (unidadFormativa1 > 10) {
+        if (notaUnidad1 > 10) {
             System.out.println("Nota 1 incorrecta. Debe ser entre 0 y 10.");
         } else {
             System.out.println("Nota 1 correcta.");
@@ -59,7 +59,7 @@ public class Notas {
      * Método para calcular la nota final del estudiante basándose en los pesos de cada unidad.
      */
     public void calcularNotas() {
-        acumuladoUF1 = unidadFormativa1 * 0.35;
+        acumuladoUF1 = notaUnidad1 * 0.35;
         acumuladoUF2 = unidadFormativa2 * 0.35;
         acumuladoUF3 = unidadFormativa3 * 0.30;
         notaFinal = acumuladoUF1 + acumuladoUF2 + acumuladoUF3;
@@ -70,7 +70,7 @@ public class Notas {
      */
     public void mostrarResultado() {
         System.out.println("Notas introducidas:");
-        System.out.println("Unidad Formativa 1 = " + unidadFormativa1);
+        System.out.println("Unidad Formativa 1 = " + notaUnidad1);
         System.out.println("Unidad Formativa 2 = " + unidadFormativa2);
         System.out.println("Unidad Formativa 3 = " + unidadFormativa3);
         System.out.println("Acumulado UF1 = " + acumuladoUF1);
